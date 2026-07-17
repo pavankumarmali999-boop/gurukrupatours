@@ -61,3 +61,31 @@ document.getElementById("homeBtn").addEventListener("click", () => {
     window.location.href = "index.html";
 
 });
+
+// ================= DOWNLOAD PDF =================
+
+const downloadPdfBtn = document.getElementById("downloadPdfBtn");
+
+if (downloadPdfBtn) {
+
+    downloadPdfBtn.addEventListener("click", () => {
+
+        const element = document.getElementById("ticketCard");
+
+        const options = {
+            margin: 0.5,
+            filename: "GURUKRUPA_Ticket.pdf",
+            image: { type: "jpeg", quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: {
+                unit: "in",
+                format: "a4",
+                orientation: "portrait"
+            }
+        };
+
+        html2pdf().set(options).from(element).save();
+
+    });
+
+}
