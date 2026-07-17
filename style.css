@@ -1,0 +1,251 @@
+/* ==========================
+   GURUKRUPA TOURS v2
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#0B3D91 !important;
+}
+
+.navbar-brand{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-link{
+    color:#fff !important;
+    margin-left:15px;
+    font-weight:500;
+}
+
+.nav-link:hover{
+    color:#FFD54F !important;
+}
+
+/* Hero */
+
+.hero{
+    padding:80px 0;
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:18px;
+    color:#666;
+}
+
+/* Buttons */
+
+.btn-primary{
+    background:#0B3D91;
+    border:none;
+    border-radius:10px;
+    padding:12px 30px;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    background:#082d6b;
+    transform:translateY(-3px);
+}
+
+/* Cards */
+
+.card{
+    border:none;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.card img{
+    height:220px;
+    object-fit:cover;
+}
+/* ==========================
+   SEARCH CARD
+========================== */
+
+.booking-card{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.booking-card input,
+.booking-card select{
+    height:50px;
+    border-radius:10px;
+}
+
+/* ==========================
+   SEAT LAYOUT
+========================== */
+
+.seat-layout{
+    display:grid;
+    grid-template-columns:repeat(2,70px) 40px repeat(2,70px);
+    justify-content:center;
+    gap:15px;
+    margin:30px auto;
+}
+
+.seat{
+    width:70px;
+    height:70px;
+    border:none;
+    border-radius:12px;
+    background:#28a745;
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.seat:hover{
+    transform:scale(1.08);
+}
+
+.seat.selected{
+    background:#0d6efd;
+}
+
+.seat.booked{
+    background:#dc3545;
+    cursor:not-allowed;
+}
+.legend{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:20px 0;
+    font-weight:bold;
+}
+
+.legend span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.box{
+    width:18px;
+    height:18px;
+    border-radius:4px;
+}
+
+.available{
+    background:#28a745;
+}
+
+.selected{
+    background:#0d6efd;
+}
+
+.bookedBox{
+    background:#dc3545;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+input,
+select{
+    border-radius:10px !important;
+}
+
+label{
+    font-weight:600;
+    margin-top:10px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#0B3D91;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+
+footer h4{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.card img{
+    height:180px;
+}
+
+.seat-layout{
+    grid-template-columns:repeat(2,55px) 25px repeat(2,55px);
+    gap:10px;
+}
+
+.seat{
+    width:55px;
+    height:55px;
+    font-size:16px;
+}
+
+.btn{
+    width:100%;
+}
+
+}
+
+.seat.booked{
+    background:#dc3545;
+    color:#fff;
+    cursor:not-allowed;
+    opacity:.8;
+}
+
+.seat:disabled{
+    pointer-events:none;
+}
